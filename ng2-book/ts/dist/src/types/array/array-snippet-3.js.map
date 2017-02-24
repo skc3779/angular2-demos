@@ -1,0 +1,1 @@
+{"version":3,"file":"array-snippet-3.js","sourceRoot":"","sources":["../../../../src/types/array/array-snippet-3.ts"],"names":[],"mappings":"AAAA,IAAI,GAAG,GAAiB,CAAC,CAAC,EAAC,CAAC,EAAC,CAAC,CAAC,CAAC","sourcesContent":["let num:Array<number> = [1,2,3];"]}

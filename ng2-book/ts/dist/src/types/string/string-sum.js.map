@@ -1,0 +1,1 @@
+{"version":3,"file":"string-sum.js","sourceRoot":"","sources":["../../../../src/types/string/string-sum.ts"],"names":[],"mappings":"AAAA,IAAI,KAAK,GAAU,QAAQ,GAAG,MAAM,CAAC,CAAC,CAAC,GAAG,WAAW,GAAE,MAAM,CAAC,CAAC,CAAC,CAAC;AACjE,OAAO,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC","sourcesContent":["let intro: string =\"one = \" + String(1) + \" \\ntwo = \"+ String(2);\r\nconsole.log(intro);"]}

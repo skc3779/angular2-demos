@@ -1,0 +1,1 @@
+{"version":3,"file":"string-backtick.js","sourceRoot":"","sources":["../../../../src/types/string/string-backtick.ts"],"names":[],"mappings":"AAAA,IAAI,UAAU,GAAU,sBAGvB,CAAA;AACD,OAAO,CAAC,GAAG,CAAC,UAAU,CAAC,CAAC","sourcesContent":["let multi_line: string =`\r\none = 1\r\ntwo = 2\r\n`\r\nconsole.log(multi_line);"]}

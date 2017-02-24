@@ -1,0 +1,1 @@
+{"version":3,"file":"child-inputs.component.js","sourceRoot":"","sources":["child-inputs.component.ts"],"names":[],"mappings":";;;;;;;;;OAAO,EAAE,SAAS,EAAS,MAAM,eAAe;AAUhD;IAAA;IAGA,CAAC;IAXD;QAAC,SAAS,CAAC;YACP,QAAQ,EAAE,cAAc;YACxB,QAAQ,EAAE,2HACyC;YACnD,MAAM,EAAE,CAAC,gFAAgF,CAAC;YAC1F,MAAM,EAAE,CAAC,OAAO,EAAE,OAAO,CAAC;SAC7B,CAAC;;4BAAA;IAKF,2BAAC;AAAD,CAAC,AAHD,IAGC"}

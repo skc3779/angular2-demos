@@ -1,0 +1,1 @@
+{"version":3,"file":"string.snippet-1.js","sourceRoot":"","sources":["../../../../src/types/string/string.snippet-1.ts"],"names":[],"mappings":"AAAA,IAAI,MAAM,GAAU,OAAO,CAAC;AAC5B,MAAM,GAAE,kBAAkB,CAAC","sourcesContent":["let myname: string ='happy';\r\nmyname =\"my name is happy\";"]}

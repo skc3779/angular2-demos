@@ -1,0 +1,1 @@
+{"version":3,"file":"hoisting.js","sourceRoot":"","sources":["../../../../src/types/let/hoisting.ts"],"names":[],"mappings":"AAAA,IAAI,OAAO,GAAC,OAAO,CAAC;AACpB,CAAC;IACG,IAAI,OAAO,GAAC,KAAK,CAAC;AACtB,CAAC;AACD,OAAO,CAAC,GAAG,CAAC,OAAO,CAAC,CAAC","sourcesContent":["var emotion=\"happy\";\r\n{\r\n    var emotion=\"sad\";\r\n}\r\nconsole.log(emotion);"]}

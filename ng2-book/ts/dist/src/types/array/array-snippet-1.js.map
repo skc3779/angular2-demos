@@ -1,0 +1,1 @@
+{"version":3,"file":"array-snippet-1.js","sourceRoot":"","sources":["../../../../src/types/array/array-snippet-1.ts"],"names":[],"mappings":"AAAA,IAAI,MAAM,GAAa,CAAC,QAAQ,EAAC,OAAO,EAAC,OAAO,CAAC,CAAC","sourcesContent":["let fruits: string[] = [\"banana\",\"apple\",\"mango\"];"]}
