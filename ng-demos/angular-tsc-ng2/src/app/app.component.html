@@ -1,0 +1,25 @@
+<div class="header-container">
+    <header>
+        <h1 class="title">{{title}}</h1>
+    </header>
+</div>
+
+<div class="main-container">
+    <router-outlet></router-outlet>
+</div>
+
+<div class="footer-container">
+    <footer>
+        <a routerLink="/">Home</a> |
+        <a routerLink="/about" routerLinkActive="active">About</a> |
+        <a routerLink="/parent" routerLinkActive="active">ParentToChild</a> |
+        <a routerLink="/parent/input" routerLinkActive="active">parentToChildInput</a> |
+        <a routerLink="/child/parent" routerLinkActive="active">childToParent</a> |
+        <a routerLink="/viewchild" routerLinkActive="active">ViewChild</a> |
+        <a routerLink="/viewchildren" routerLinkActive="active">ViewChildren</a> |
+        <a routerLink="/contentchild" routerLinkActive="active">ContentChild</a> |
+        <a routerLink="/contentchildren" routerLinkActive="active">ContentChildren</a> |
+        <a routerLink="/componentstyle" routerLinkActive="active">ComponentStyle</a> |
+        <a routerLink="/hello" routerLinkActive="active">Service:Hello</a> |
+    </footer>
+</div>
