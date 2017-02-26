@@ -35,10 +35,14 @@ import {ListComponent} from './promise-serivce/list.component';
 import {CarComponent} from './shared-service/car.component';
 import {TaxiComponent} from './shared-service/taxi.component';
 import {ParentComponent} from './shared-service/parent.component';
+import {NotFoundComponent} from './not-found/not-found.component';
 
 /* 특징 모듈 */
 import { MemberModule } from './member-module/member.module';
 import { PlayerModule } from './player-module/player.module';
+
+// 해시기반 주소로 변경
+//import {LocationStrategy, HashLocationStrategy} from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -63,7 +67,8 @@ import { PlayerModule } from './player-module/player.module';
     ListComponent,
     CarComponent,
     TaxiComponent,
-    ParentComponent
+    ParentComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -76,6 +81,9 @@ import { PlayerModule } from './player-module/player.module';
     PlayerModule  // 하위모듈 및 공유
   ],
   //providers: [appRoutingProviders], // 라우딩 모듈 등록방법 1
+  //해시기반 주소로 변경 --> http://domain/#/path
+  //providers:[{provide:LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

@@ -15,6 +15,7 @@ import {OopComponent} from './oop-service/oop.component';
 import {MockComponent} from './mock-service/mock.component';
 import {PromiseComponent} from './promise-serivce/promise.component';
 import {ParentComponent} from './shared-service/parent.component';
+import {NotFoundComponent} from './not-found/not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
   { path: 'shared-service', component: ParentComponent},
   // 게이른 모듈 로딩
   { path: 'lazy', loadChildren: 'app/player-module/player.module#PlayerModule' },
-
+  { path: '**', component: NotFoundComponent}
 ];
 
 // 라우딩 모듈 등록방법 1
@@ -45,6 +46,5 @@ const appRoutes: Routes = [
   imports:[RouterModule.forRoot(appRoutes)],
   exports:[RouterModule]
 })
-
 export class AppRoutingModule {}
 
