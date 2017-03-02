@@ -16,8 +16,19 @@ import {MockComponent} from './mock-service/mock.component';
 import {PromiseComponent} from './promise-serivce/promise.component';
 import {ParentComponent} from './shared-service/parent.component';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {AdminComponent} from './admin/admin.component';
 
-const appRoutes: Routes = [
+//해시기반 주소로 변경 포함
+import {LocationStrategy, HashLocationStrategy} from '@angular/common'
+
+//로그인 관련
+import { loginRoutes, authProviders } from './login.routing';
+
+//해시기반 주소로 변경 설정 --> http://domain/#/path
+let hashLocationStrategy: boolean = false;
+
+//컴포넌트와 서비스에 대한 샘플
+const basicRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'parent-to-child', component: NestedParentComponent },
@@ -32,9 +43,22 @@ const appRoutes: Routes = [
   { path: 'mock-service', component: MockComponent },
   { path: 'promise-service', component: PromiseComponent },
   { path: 'shared-service', component: ParentComponent},
-  // 게이른 모듈 로딩
-  { path: 'lazy', loadChildren: 'app/player-module/player.module#PlayerModule' },
-  { path: '**', component: NotFoundComponent}
+  { path: 'admin', component: AdminComponent},
+  //{ path: '**', component: NotFoundComponent}
+];
+
+// 게이른 모듈 로딩
+const lazyRoutes: Routes = [
+  { path: 'lazy', loadChildren: 'app/player-module/player.module#PlayerModule' }
+];
+
+const appRoutes: Routes = [
+  // 로그인 라우팅
+  ...loginRoutes,
+  // 컴포넌트와 서비스에 대한 라우팅
+  ...basicRoutes,
+  // 게이른 모듈 로딩 라우팅
+  ...lazyRoutes
 ];
 
 // 라우딩 모듈 등록방법 1
@@ -42,9 +66,22 @@ const appRoutes: Routes = [
 //export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
 
 // 라우딩 모듈 등록방법 2
-@NgModule({
-  imports:[RouterModule.forRoot(appRoutes)],
-  exports:[RouterModule]
-})
-export class AppRoutingModule {}
+// @NgModule({
+//   imports:[RouterModule.forRoot(appRoutes)],
+//   exports:[RouterModule]
+// })
+
+//라우딩 모듈 등록방법 3번 --> 1번 확장
+//Guard 추가
+export const appRoutingProviders: any[] = [
+  authProviders
+];
+
+//해쉬기반 주소변경 여부
+if(hashLocationStrategy){
+  appRoutingProviders.push({provide: LocationStrategy, useClass: HashLocationStrategy});
+}
+
+export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+
 

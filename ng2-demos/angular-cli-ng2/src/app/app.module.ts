@@ -1,12 +1,12 @@
+
 import {BrowserModule } from '@angular/platform-browser';
 import {NgModule } from '@angular/core';
 import {FormsModule } from '@angular/forms';
 import {HttpModule, JsonpModule} from '@angular/http';
 import {AppComponent } from './app.component';
-// 라우딩 모듈 등록방법 1
-//import {routing, appRoutingProviders} from './app.routing';
-// 라우딩 모듈 등록방법 2
-import {AppRoutingModule} from './app.routing';
+
+// 라우딩 모듈 등록방법 1과 2번
+import {AppRoutingModule, appRoutingProviders} from './app.routing';
 import {HomeComponent } from './home/home.component';
 import {AboutComponent } from './about/about.component';
 
@@ -36,12 +36,19 @@ import {CarComponent} from './shared-service/car.component';
 import {TaxiComponent} from './shared-service/taxi.component';
 import {ParentComponent} from './shared-service/parent.component';
 import {NotFoundComponent} from './not-found/not-found.component';
+import { AdminComponent } from './admin/admin.component';
 
 /* 특징 모듈 */
 import { MemberModule } from './member-module/member.module';
 import { PlayerModule } from './player-module/player.module';
 
-// 해시기반 주소로 변경
+/* 로그인 */
+import { LoginComponent } from './login.component';
+
+/* 라우팅 */
+import { ChildrenModule } from './children-route/children.module';
+
+//해시기반 주소로 변경
 //import {LocationStrategy, HashLocationStrategy} from '@angular/common'
 
 @NgModule({
@@ -68,19 +75,22 @@ import { PlayerModule } from './player-module/player.module';
     CarComponent,
     TaxiComponent,
     ParentComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     JsonpModule,
-    AppRoutingModule, // 라우딩 모듈 등록방법 2
-    //routing // 라우딩 모듈 등록방법 1
+    AppRoutingModule, // 라우딩 모듈 등록방법 1과 3번
     MemberModule, // 하위모듈
-    PlayerModule  // 하위모듈 및 공유
+    PlayerModule,  // 하위모듈 및 공유
+    //가드(guard) : 라우팅시 접근을 제어하는 방법
+    ChildrenModule
   ],
-  //providers: [appRoutingProviders], // 라우딩 모듈 등록방법 1
+  providers: [appRoutingProviders], // 라우딩 모듈 등록방법 1과 3번
   //해시기반 주소로 변경 --> http://domain/#/path
   //providers:[{provide:LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
