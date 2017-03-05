@@ -18,10 +18,40 @@ import {ParentComponent} from './shared-service/parent.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {AdminComponent} from './admin/admin.component';
 
-//해시기반 주소로 변경 포함
+/* 제공자 */
+import {ValueProviderComponent} from './value-provider/value-provider.component';
+import {FactoryProviderComponent} from './factory-provider/factory-provider.component';
+import {ClassProviderComponent} from './class-provider/class-provider.component';
+import {AliasedClassProviderComponent} from './class-provider/aliased-class-provider.component';
+
+/* 불투명 토큰 제공자 */
+import {OpaqueTokenComponent} from './opaque-token/opaque-token.component';
+
+/*선택적 장식자를 이요한 의존성 주입*/
+import {OptionalDecoratorComponent} from './optional-decorator/optional-decorator.component';
+
+/*팩토리 패턴을 이용한 객체 주입*/
+import {FactoryComponent} from './factory/factory.component';
+
+/*주입기를 이용한 객체 생성*/
+import {ReflectiveInjectorComponent} from './reflective-injector/reflective-injector.component';
+
+/* 바인딩 단방향 삽입식 */
+import {InterpolationComponent} from './interpolation/interpolation.component';
+
+/* 바인딩 단방향 바인딩 표현식 */
+import {OnewayExpressionComponent} from './oneway-expression/oneway-expression.component';
+
+/* 어트리뷰트, 클래스 스타일 이벤트 바인딩 */
+import {OnewayStatementComponent} from './oneway-statement/oneway-statement.component';
+
+/* 양방향 바인딩 */
+import {TwowayNgmodelComponent} from './twoway-ngmodel/twoway-ngmodel.component';
+
+/*해시기반 주소로 변경 포함*/
 import {LocationStrategy, HashLocationStrategy} from '@angular/common'
 
-//로그인 관련
+/*로그인 관련*/
 import { loginRoutes, authProviders } from './login.routing';
 
 //해시기반 주소로 변경 설정 --> http://domain/#/path
@@ -44,6 +74,18 @@ const basicRoutes: Routes = [
   { path: 'promise-service', component: PromiseComponent },
   { path: 'shared-service', component: ParentComponent},
   { path: 'admin', component: AdminComponent},
+  { path: 'app-value-provider', component: ValueProviderComponent},
+  { path: 'app-factory-provider', component: FactoryProviderComponent},
+  { path: 'app-class-provider', component: ClassProviderComponent},
+  { path: 'app-alias-provider', component: AliasedClassProviderComponent},
+  { path: 'app-inject-decorator', component: OpaqueTokenComponent},
+  { path: 'app-optional-decorator', component: OptionalDecoratorComponent},
+  { path: 'app-factory', component: FactoryComponent},
+  { path: 'app-reflective-injector', component: ReflectiveInjectorComponent},
+  { path: 'app-interpolation', component: InterpolationComponent},
+  { path: 'app-oneway-expression', component: OnewayExpressionComponent},
+  { path: 'app-oneway-statement', component: OnewayStatementComponent},
+  { path: 'app-twoway-ngmodel', component: TwowayNgmodelComponent},
   //{ path: '**', component: NotFoundComponent}
 ];
 

@@ -6,17 +6,27 @@
 
 ```bash
 $ npm install -g typescript
-$ npm start
+$ tsc -version
+$ npm install yo generator-angular2-typescript -g
+```
+## create project
+
+```angular2html
+mkdir my-new-project && cd $_
+yo angular2-typescript [app-name]
 ```
 
 ## Production Build
 ```bash
 $ npm run build
+$ ng serve
 ```
 
 ## Running Unit Tests
 ```bash
 $ npm test
+# Generate code coverage report
+npm run coverage
 ```
 
 ## Running End-to-End Tests

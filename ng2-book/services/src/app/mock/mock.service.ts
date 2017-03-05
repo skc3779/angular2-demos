@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { USER } from './mock-user';
 
-export interface DataServiceStructure{
+export interface DataServiceStructure {
   getUser();
 }
 

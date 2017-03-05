@@ -1,15 +1,18 @@
-
 import {BrowserModule } from '@angular/platform-browser';
 import {NgModule } from '@angular/core';
 import {FormsModule } from '@angular/forms';
 import {HttpModule, JsonpModule} from '@angular/http';
 import {AppComponent } from './app.component';
 
+//해시기반 주소로 변경
+//import {LocationStrategy, HashLocationStrategy} from '@angular/common'
+
 // 라우딩 모듈 등록방법 1과 2번
 import {AppRoutingModule, appRoutingProviders} from './app.routing';
 import {HomeComponent } from './home/home.component';
 import {AboutComponent } from './about/about.component';
 
+/* 부모에서 자식확장 */
 import {NestedParentComponent } from './parent-to-child/parent.component';
 import {NestedChildComponent } from './parent-to-child/child.component';
 import {NestedGrandsonComponent } from './parent-to-child/grandson.component';
@@ -17,6 +20,7 @@ import {NestedGrandsonComponent } from './parent-to-child/grandson.component';
 import {ChildInputComponent} from './parent-to-child-input/child-input.component';
 import {ParentToChildInputComponent} from './parent-to-child-input/parent-to-child-input.component';
 
+/* 자식에서 부모으로 */
 import {ChildComponent} from './child-to-parent/child.component';
 import {ChildToParentComponent} from './child-to-parent/child-to-parent.component';
 
@@ -48,8 +52,38 @@ import { LoginComponent } from './login.component';
 /* 라우팅 */
 import { ChildrenModule } from './children-route/children.module';
 
-//해시기반 주소로 변경
-//import {LocationStrategy, HashLocationStrategy} from '@angular/common'
+/* 제공자 */
+import {ValueProviderComponent} from './value-provider/value-provider.component';
+import {FactoryProviderComponent} from './factory-provider/factory-provider.component';
+import {Engine, Speedmeter} from './factory-provider/car.service';
+import {ClassProviderComponent} from './class-provider/class-provider.component';
+import {AliasedClassProviderComponent} from './class-provider/aliased-class-provider.component';
+
+/* 불투명 토큰 제공자 */
+import {OpaqueTokenComponent} from './opaque-token/opaque-token.component';
+
+/*선택적 장식자를 이요한 의존성 주입*/
+import {OptionalDecoratorComponent} from './optional-decorator/optional-decorator.component';
+
+/*팩토리 패턴을 이용한 객체 주입*/
+import {FactoryComponent} from './factory/factory.component';
+
+/*주입기를 이용한 객체 생성*/
+import {ReflectiveInjectorComponent} from './reflective-injector/reflective-injector.component';
+
+/* 바인딩 단방향 삽입식 */
+import {InterpolationComponent} from './interpolation/interpolation.component';
+
+/* 바인딩 단방향 바인딩 표현식 */
+import {OnewayExpressionComponent} from './oneway-expression/oneway-expression.component';
+
+/* 어트리뷰트, 클래스 스타일 이벤트 바인딩 */
+import {OnewayStatementComponent} from './oneway-statement/oneway-statement.component';
+import {ContactComponent} from './oneway-statement/contact.component';
+import {MyClickDirective} from './oneway-statement/my-click.directive';
+
+/* 양방향 바인딩 */
+import {TwowayNgmodelComponent} from './twoway-ngmodel/twoway-ngmodel.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +111,21 @@ import { ChildrenModule } from './children-route/children.module';
     ParentComponent,
     NotFoundComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    ValueProviderComponent,
+    FactoryProviderComponent,
+    ClassProviderComponent,
+    AliasedClassProviderComponent,
+    OpaqueTokenComponent,
+    OptionalDecoratorComponent,
+    FactoryComponent,
+    ReflectiveInjectorComponent,
+    InterpolationComponent,
+    OnewayExpressionComponent,
+    OnewayStatementComponent,
+    ContactComponent,
+    MyClickDirective,
+    TwowayNgmodelComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +138,8 @@ import { ChildrenModule } from './children-route/children.module';
     //가드(guard) : 라우팅시 접근을 제어하는 방법
     ChildrenModule
   ],
-  providers: [appRoutingProviders], // 라우딩 모듈 등록방법 1과 3번
+  providers: [appRoutingProviders,
+    Engine, Speedmeter], // 라우딩 모듈 등록방법 1과 3번
   //해시기반 주소로 변경 --> http://domain/#/path
   //providers:[{provide:LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
