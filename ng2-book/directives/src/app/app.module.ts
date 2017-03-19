@@ -41,7 +41,7 @@ import { ElementRendering, MyElementRef, MyRenderer } from './element-rendering/
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule,
+      FormsModule,
     routing
   ],
   providers: [

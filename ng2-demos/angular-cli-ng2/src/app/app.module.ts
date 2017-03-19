@@ -85,6 +85,65 @@ import {MyClickDirective} from './oneway-statement/my-click.directive';
 /* 양방향 바인딩 */
 import {TwowayNgmodelComponent} from './twoway-ngmodel/twoway-ngmodel.component';
 
+/* 9.4 속성지시자 */
+import {NgclassComponent} from './ngclass/ngclass.component';
+import {NgstyleComponent} from './ngstyle/ngstyle.component';
+
+/* 9.5 구조지시자 */
+import {NgifComponent} from './ngif/ngif.component';
+import {NgswitchComponent} from './ngswitch/ngswitch.component'
+import {NgForComponent} from './ngfor/ngfor.component';
+
+/* 9.6 템플릿 지시자 */
+import {TemplateNgforComponent} from './template-ngfor/template-ngfor.component';
+/* 9.6.2 템플릿 입력변수 */
+import {TemplateInputVariablesComponent} from './template-input-variables/template-input-variables.component';
+/* 9.6.3 템플릿 참조변수 */
+import {TemplateReferenceVariablesComponent} from './template-reference-variables/template-reference-variables.component';
+
+/* 10.2.1 커스텀 지시자 */
+import {CustomDirectiveCmp} from './custom-directive/custom-directive.component';
+import {MyClick2Directive} from './custom-directive/my-click2.directive';
+/* 10.2.4 ElementRef와 Renderer */
+import {ElementRendering, MyElementRef, MyRenderer} from './element-rendering/element-rendering.component';
+/* 10.3.1 지시자에 값 넘기기 */
+import {PassToDirectiveComponent} from './pass-to-directive/pass-to-directive.component';
+import {myDirective} from './pass-to-directive/my.directive';
+/* 10.3.2 지시자로부터 응답받기 */
+import {BindingToDirectiveComponent} from './binding-to-directive/binding-to-directive.component';
+import {AlertDirective} from './binding-to-directive/alert.directive';
+/* 10.3.3 커스텀 속성 지시자 */
+import {CustomAttrDirectiveCmp} from './custom-attr-directive/custom-attr-directive.component';
+import {CustomAttrDirective} from './custom-attr-directive/custom-attr.directive';
+/* 10.3.4 커스텀 구조 지시자 */
+import {CustomStructuralDirectiveCmp} from './custom-structural-directive/custom-structural-directive.component';
+import {MyIfDirective} from './custom-structural-directive/myif.directive';
+/* 10.3.5 하이라이트 지시자 */
+import {HighlightComponent} from './highlight-directive/highlight.component';
+import {HighlightDirective} from './highlight-directive/highlight.directive';
+/* 11.2.1 날짜 파이프*/
+import {DateExpressionComponent} from './pipe-date-expression/date-expression.component';
+/* 11.2.1 날짜 파이트 포멧 */
+import {DateFormatsComponent} from './pipe-date-formats/date-formats.component';
+import {DateEtcComponent} from './pipe-date-etc/date-etc.component';
+/* 11.2.2 대소문자파이프 */
+import {UpperLower2Component} from './pipe-upper-lower/upper-lower2.component';
+/* 11.2.5 비동기 파이프 */
+import {AsyncComponent} from './pipe-async/async.component';
+/* 11.2.3 통화 파이프 */
+import {CurrencyComponent} from './pipe-currency/currency.component';
+/* 11.2.7 데시멀 파이프 */
+import {DecimalComponent} from './pipe-decimal/decimal.component';
+/* 11.2.6 Json 파이프 */
+import {JsonComponent} from './pipe-json/json.component';
+/* 11.2.8 문자열처리 */
+import {SliceComponent} from './pipe-slice/slice.component';
+/* 11.2.8 다국어 */
+import {I18nSelectComponent} from './pipe-i18n-select/i18n-select.component';
+import {I18nPluralComponent} from './pipe-i18n-plural/i18n-plural.component';
+/* 11.2.9 체이닝 파이프 */
+import {ChainingPipesComponent} from './pipe-chaining-pipes/chaining-pipes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -125,7 +184,34 @@ import {TwowayNgmodelComponent} from './twoway-ngmodel/twoway-ngmodel.component'
     OnewayStatementComponent,
     ContactComponent,
     MyClickDirective,
-    TwowayNgmodelComponent
+    TwowayNgmodelComponent,
+    NgclassComponent,
+    NgstyleComponent,
+    NgifComponent,
+    NgswitchComponent,
+    NgForComponent,
+    TemplateNgforComponent,
+    TemplateInputVariablesComponent,
+    TemplateReferenceVariablesComponent,
+    CustomDirectiveCmp, MyClick2Directive,
+    ElementRendering, MyElementRef, MyRenderer,
+    PassToDirectiveComponent, myDirective,
+    BindingToDirectiveComponent, AlertDirective,
+    CustomAttrDirectiveCmp, CustomAttrDirective,
+    CustomStructuralDirectiveCmp, MyIfDirective,
+    HighlightComponent, HighlightDirective,
+    DateExpressionComponent,
+    DateFormatsComponent,
+    DateEtcComponent,
+    UpperLower2Component,
+    AsyncComponent,
+    CurrencyComponent,
+    DecimalComponent,
+    JsonComponent,
+    SliceComponent,
+    I18nSelectComponent,
+    I18nPluralComponent,
+    ChainingPipesComponent
   ],
   imports: [
     BrowserModule,
