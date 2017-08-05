@@ -4,8 +4,10 @@ import {FormsModule } from '@angular/forms';
 import {HttpModule, JsonpModule} from '@angular/http';
 import {AppComponent } from './app.component';
 
-//해시기반 주소로 변경
-//import {LocationStrategy, HashLocationStrategy} from '@angular/common'
+/*
+해시기반 주소로 변경
+import {LocationStrategy, HashLocationStrategy} from '@angular/common'
+*/
 
 // 라우딩 모듈 등록방법 1과 2번
 import {AppRoutingModule, appRoutingProviders} from './app.routing';

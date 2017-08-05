@@ -1,12 +1,12 @@
 import {TestBed} from '@angular/core/testing';
 
-import {AboutComponent} from './not-found.component';
+import {NotFoundComponent} from './not-found.component';
 
 describe('AboutComponent', () => {
-    beforeEach(() => TestBed.configureTestingModule({ declarations: [AboutComponent] }));
+    beforeEach(() => TestBed.configureTestingModule({ declarations: [NotFoundComponent] }));
 
-    it('should instantiate the AboutComponent', () => {
-        let fixture = TestBed.createComponent(AboutComponent);
-        expect(fixture.componentInstance instanceof AboutComponent).toBe(true, 'should create AboutComponent');
+    it('should instantiate the NotFoundComponent', () => {
+        const fixture = TestBed.createComponent(NotFoundComponent);
+        expect(fixture.componentInstance instanceof NotFoundComponent).toBe(true, 'should create NotFoundComponent');
     });
 });
